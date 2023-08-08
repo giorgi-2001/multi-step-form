@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Multi-step form</title>
+  <link rel="stylesheet" href="index.css">
+  <script defer src="index.js"></script>
+  <style>
+    
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="slide-bar">
+      <div>
+          <div>
+          <span class="active">1</span>
+          <div class="step-text">
+            <p>step 1</p>
+            <h4>your info</h4>
+          </div>
+        </div>
+        <div>
+          <span>2</span>
+          <div class="step-text">
+            <p>step 2</p>
+            <h4>select plan</h4>
+          </div>
+        </div>
+        <div>
+          <span>3</span>
+          <div class="step-text">
+            <p>step 3</p>
+            <h4>add-ons</h4>
+          </div>
+        </div>
+        <div>
+          <span>4</span>
+          <div class="step-text">
+            <p>step 4</p>
+            <h4>summary</h4>
+          </div>
+        </div>
+      </div> 
+    </div>
+
+    <div class="content-box show" id="step1">
+
+      <div class="content-header">
+        <h2>Personal info</h2>
+        <p>Please provide your name, email, adress, and phone number.</p>
+      </div>
+
+      <div class="content-body">
+        <form>
+          <div class="form-element">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="e.g Stephen King">
+            <div class="error-message"></div>
+          </div>
+          <div class="form-element">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="e.g stephenking@lorem.com">
+            <div class="error-message">This field is required</div>
+          </div>
+          <div class="form-element">
+            <label for="tel">Phone Number</label>
+            <input type="tel" id="tel" name="tel" placeholder="e.g +1 234 567 890">
+            <div class="error-message"></div>
+          </div>
+        </form>
+      </div>
+
+
+    </div>
+
+    <div class="content-box" id="step2">
+
+      <div class="content-header">
+        <h2>Select your plan</h2>
+        <p>You have the option of monthly or yearly billing.</p>
+      </div>
+
+      <div class="content-body">
+        <div class="plan active">
+          <img src="assets/images/icon-arcade.svg" alt="Arcade plan">
+          <div>
+            <h3>Arcade</h3>
+            <p>$9/mo</p>
+            <span class="special-offer hidden">2 months free</span>
+          </div>
+        </div>
+
+        <div class="plan">
+          <img src="assets/images/icon-advanced.svg" alt="Advanced plan">
+          <div>
+            <h3>Advanced</h3>
+            <p>$12/mo</p>
+            <span class="special-offer hidden">2 months free</span>
+          </div>
+        </div>
+
+        <div class="plan">
+          <img src="assets/images/icon-pro.svg" alt="Pro plan">
+          <div>
+            <h3>Pro</h3>
+            <p>$15/mo</p>
+            <span class="special-offer hidden">2 months free</span>
+          </div>
+        </div>
+        <div class="switch-box">
+          <span class="monthly">Monthly</span>
+          <label class="switch">
+            <input type="checkbox"  id="mySwitch">
+            <span class="slider"></span>
+          </label>
+          <span class="yearly">Yearly</span>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="content-box" id="step3">
+
+      <div class="content-header">
+        <h2>Pick add-ons</h2>
+        <p>Add-ons help enhance your gaming experience</p>
+      </div>
+
+      <div class="content-body">
+        <div class="add-on">
+          <div class="checkbox"></div>
+          <div>
+            <h4>Online service</h4>
+            <p>Access to multiplayer games</p>
+          </div>
+          <span class="price">+$1/mo</span>
+        </div>
+        <div class="add-on">
+          <div class="checkbox"></div>
+          <div>
+            <h4>Larger storage</h4>
+            <p>Extra 1TB cloud save</p>
+          </div>
+          <span class="price">+$2/mo</span>
+        </div>
+        <div class="add-on">
+          <div class="checkbox"></div>
+          <div>
+            <h4>Customizable profile</h4>
+            <p>Custom theme on your profile</p>
+          </div>
+          <span class="price">+$2/mo</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="content-box" id="step4">
+
+      <div class="content-header">
+        <h2>Finishing up</h2>
+        <p>Double-check everything looks OK before confirming</p>
+      </div>
+
+      <div class="content-body">
+        <div class="finishing">
+          <div>
+            <div>
+              <h4><span id="finishing-plan">Arcade</span> <span class="plan-status">(Monthly)</span></h4>
+              <p id="change">Change</p>
+            </div>
+            <span class="finishing-price">$9/mo</span>
+          </div>
+          <!-- <div>
+            <p>Online service</p>
+            <span class="finishing-price">+$1/mo</span>
+          </div>
+          <div>
+            <p>Larger storage</p>
+            <span class="finishing-price">+2$/mo</span>
+          </div> -->
+        </div>
+        <div class="total">
+          <p>Total <span class="total-status">(per month)</span></p>
+          <div><span class="total-price number">+$12/</span><span class="total-price plan-status2">mo</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="content-box" id="thank-you-page">
+      <div class="content-body">
+        <div class="thank-you">
+          <img src="assets/images/icon-thank-you.svg" alt="Thak You">
+          <h2>Thank you!</h2>
+          <p>Thanks for confirming your subscription! We hope you have fun using our platform. if you ever need support, please feel free to email us at support@loremgaming.com.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <button id="prev-btn">Go back</button>
+      <button id="next-btn" class="confirm">Next Step</button>
+    </footer>
+
+    <div class="whitespace"></div>
+    
+  </div>
+
+</body>
+</html>
