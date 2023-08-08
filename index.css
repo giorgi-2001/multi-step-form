@@ -36,7 +36,7 @@ body{
 .slide-bar {
     height: 180px;
     width: 100%;
-    background-image: url(/assets/images/bg-sidebar-desktop.svg);
+    background-image: url(assets/images/bg-sidebar-desktop.svg);
     background-repeat: no-repeat;
     background-size: 104.4%;
     background-position: bottom -80px right;
