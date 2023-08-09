@@ -94,6 +94,7 @@ change.addEventListener('click', () => {
     })
 
     sliders[i].classList.add('active');
+    setLayout();
 })
 
 
